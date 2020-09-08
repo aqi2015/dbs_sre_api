@@ -1,0 +1,10 @@
+{
+"worker": "alluxio",
+"requestor": "padeep",
+"action": "create_dir",
+"task_id": "SAAB002",
+"payload": "{\"path\": \"/create_dir\"}",
+"name": "alluxio01",
+"admin": "Rohit",
+"imagename": "alluxio-shell-worker:latest"
+}

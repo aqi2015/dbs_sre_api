@@ -1,0 +1,477 @@
+{
+  'api_version': 'apps/v1',
+  \
+  n
+  'kind': 'Deployment',
+  \
+  n
+  'metadata': {
+    'annotations': None,
+    \
+    n
+    'cluster_name': None,
+    \
+    n
+    'creation_timestamp': datetime.datetime(2020,
+    8,
+    4,
+    10,
+    25,
+    11,
+    tzinfo=tzutc()),
+    \
+    n
+    'deletion_grace_period_seconds': None,
+    \
+    n
+    'deletion_timestamp': None,
+    \
+    n
+    'finalizers': None,
+    \
+    n
+    'generate_name': None,
+    \
+    n
+    'generation': 1,
+    \
+    n
+    'initializers': None,
+    \
+    n
+    'labels': None,
+    \
+    n
+    'managed_fields': [
+      {
+        'api_version': 'apps/v1',
+        \
+        n
+        'fields': None,
+        \
+        n
+        'manager': 'OpenAPI-Generator',
+        \
+        n
+        'operation': 'Update',
+        \
+        n
+        'time': datetime.datetime(2020,
+        8,
+        4,
+        10,
+        25,
+        11,
+        tzinfo=tzutc())
+      }
+    ],
+    \
+    n
+    'name': 'alluxio-7ae8cea4-1aff-3048-bece-a68ca2725727',
+    \
+    n
+    'namespace': 'ada-auto',
+    \
+    n
+    'owner_references': None,
+    \
+    n
+    'resource_version': '1652877',
+    \
+    n
+    'self_link': '/apis/apps/v1/namespaces/ada-auto/deployments/alluxio-7ae8cea4-1aff-3048-bece-a68ca2725727',
+    \
+    n
+    'uid': 'f790fbc7-db0d-4b58-95bb-06bbb5aa4249'
+  },
+  \
+  n
+  'spec': {
+    'min_ready_seconds': None,
+    \
+    n
+    'paused': None,
+    \
+    n
+    'progress_deadline_seconds': 600,
+    \
+    n
+    'replicas': 1,
+    \
+    n
+    'revision_history_limit': 10,
+    \
+    n
+    'selector': {
+      'match_expressions': None,
+      \
+      n
+      'match_labels': {
+        'app': 'alluxio'
+      }
+    },
+    \
+    n
+    'strategy': {
+      'rolling_update': {
+        'max_surge': '25%',
+        \
+        n
+        'max_unavailable': '25%'
+      },
+      \
+      n
+      'type': 'RollingUpdate'
+    },
+    \
+    n
+    'template': {
+      'metadata': {
+        'annotations': None,
+        \
+        n
+        'cluster_name': None,
+        \
+        n
+        'creation_timestamp': None,
+        \
+        n
+        'deletion_grace_period_seconds': None,
+        \
+        n
+        'deletion_timestamp': None,
+        \
+        n
+        'finalizers': None,
+        \
+        n
+        'generate_name': None,
+        \
+        n
+        'generation': None,
+        \
+        n
+        'initializers': None,
+        \
+        n
+        'labels': {
+          'app': 'alluxio'
+        },
+        \
+        n
+        'managed_fields': None,
+        \
+        n
+        'name': 'alluxio-7ae8cea4-1aff-3048-bece-a68ca2725727',
+        \
+        n
+        'namespace': 'ada-auto',
+        \
+        n
+        'owner_references': None,
+        \
+        n
+        'resource_version': None,
+        \
+        n
+        'self_link': None,
+        \
+        n
+        'uid': None
+      },
+      \
+      n
+      'spec': {
+        'active_deadline_seconds': None,
+        \
+        n
+        'affinity': None,
+        \
+        n
+        'automount_service_account_token': None,
+        \
+        n
+        'containers': [
+          {
+            'args': None,
+            \
+            n
+            'command': None,
+            \
+            n
+            'env': [
+              {
+                'name': 'INPUT_ARGS',
+                \
+                n
+                'value': '{\"host\": '
+                \
+                n
+                '\"10.211.55.5\", '
+                \
+                n
+                '\"port\": '
+                \
+                n
+                '39999, '
+                \
+                n
+                '\"requestor\": '
+                \
+                n
+                '\"amp\", '
+                \
+                n
+                '\"worker\": '
+                \
+                n
+                '\"alluxio\", '
+                \
+                n
+                '\"action\": '
+                \
+                n
+                '\"create_dir\", '
+                \
+                n
+                '\"task_id\": '
+                \
+                n
+                '\"SAAB-001\", '
+                \
+                n
+                '\"payload\": '
+                \
+                n
+                '\"{\\\\\"path\\\\\": '
+                \
+                n
+                '\\\\\"/create_dir\\\\\"}\", '
+                \
+                n
+                '\"name\": '
+                \
+                n
+                '\"alluxio01\", '
+                \
+                n
+                '\"admin\": '
+                \
+                n
+                '\"Rohit\"}',
+                \
+                n
+                'value_from': None
+              }
+            ],
+            \
+            n
+            'env_from': None,
+            \
+            n
+            'image': 'alluxio-worker:latest',
+            \
+            n
+            'image_pull_policy': 'IfNotPresent',
+            \
+            n
+            'lifecycle': None,
+            \
+            n
+            'liveness_probe': None,
+            \
+            n
+            'name': 'deployment',
+            \
+            n
+            'ports': [
+              {
+                'container_port': 5678,
+                \
+                n
+                'host_ip': None,
+                \
+                n
+                'host_port': None,
+                \
+                n
+                'name': None,
+                \
+                n
+                'protocol': 'TCP'
+              }
+            ],
+            \
+            n
+            'readiness_probe': None,
+            \
+            n
+            'resources': {
+              'limits': None,
+              \
+              n
+              'requests': None
+            },
+            \
+            n
+            'security_context': None,
+            \
+            n
+            'stdin': None,
+            \
+            n
+            'stdin_once': None,
+            \
+            n
+            'termination_message_path': '/dev/termination-log',
+            \
+            n
+            'termination_message_policy': 'File',
+            \
+            n
+            'tty': None,
+            \
+            n
+            'volume_devices': None,
+            \
+            n
+            'volume_mounts': None,
+            \
+            n
+            'working_dir': None
+          }
+        ],
+        \
+        n
+        'dns_config': None,
+        \
+        n
+        'dns_policy': 'ClusterFirst',
+        \
+        n
+        'enable_service_links': None,
+        \
+        n
+        'host_aliases': None,
+        \
+        n
+        'host_ipc': None,
+        \
+        n
+        'host_network': None,
+        \
+        n
+        'host_pid': None,
+        \
+        n
+        'hostname': None,
+        \
+        n
+        'image_pull_secrets': None,
+        \
+        n
+        'init_containers': None,
+        \
+        n
+        'node_name': None,
+        \
+        n
+        'node_selector': None,
+        \
+        n
+        'preemption_policy': None,
+        \
+        n
+        'priority': None,
+        \
+        n
+        'priority_class_name': None,
+        \
+        n
+        'readiness_gates': None,
+        \
+        n
+        'restart_policy': 'Always',
+        \
+        n
+        'runtime_class_name': None,
+        \
+        n
+        'scheduler_name': 'default-scheduler',
+        \
+        n
+        'security_context': {
+          'fs_group': None,
+          \
+          n
+          'run_as_group': None,
+          \
+          n
+          'run_as_non_root': None,
+          \
+          n
+          'run_as_user': None,
+          \
+          n
+          'se_linux_options': None,
+          \
+          n
+          'supplemental_groups': None,
+          \
+          n
+          'sysctls': None,
+          \
+          n
+          'windows_options': None
+        },
+        \
+        n
+        'service_account': None,
+        \
+        n
+        'service_account_name': None,
+        \
+        n
+        'share_process_namespace': None,
+        \
+        n
+        'subdomain': None,
+        \
+        n
+        'termination_grace_period_seconds': 30,
+        \
+        n
+        'tolerations': None,
+        \
+        n
+        'volumes': None
+      }
+    }
+  },
+  \
+  n
+  'status': {
+    'available_replicas': None,
+    \
+    n
+    'collision_count': None,
+    \
+    n
+    'conditions': None,
+    \
+    n
+    'observed_generation': None,
+    \
+    n
+    'ready_replicas': None,
+    \
+    n
+    'replicas': None,
+    \
+    n
+    'unavailable_replicas': None,
+    \
+    n
+    'updated_replicas': None
+  }
+}
